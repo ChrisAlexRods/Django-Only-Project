@@ -41,6 +41,7 @@ def signup(request):
                 username,
                 password=password,
             )
+            user.save()
 
             login(request, user)
 
