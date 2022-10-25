@@ -5,5 +5,5 @@ from projects.models import Project
 
 
 @admin.register(Project)
-class ProjectAdming(admin.ModelAdmin):
+class ProjectAdmin(admin.ModelAdmin):
     list_display = ("name", "description", "owner")
