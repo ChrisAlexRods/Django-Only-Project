@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <main>
+        <div>
+            <h1>My Tasks</h1>
+            {% if Task %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Start date</th>
+                            <th>Due date"</th>
+                            <th>Is completed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {% for rep in Task %}
+                                <td>{{ rep.name }}</td>
+                                <td>{{ rep.start_date }}</td>
+                                <td>{{ rep.due_date }}</td>
+                                <td>{{ rep.is_completed }}</td>
+                            {% endfor %}
+                        </tr>
+                    </tbody>
+                </table>
+            {% else %}
+                <p>You have no tasks</p>
+            {% endif %}
+        </div>
+    </main>
+{% endblock content %}

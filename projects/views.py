@@ -3,7 +3,7 @@ from projects.models import Project
 from projects.forms import ProjectForm
 from django.contrib.auth.decorators import login_required
 
-# Create your views here.
+
 @login_required
 def list_projects(request):
     list_projects = Project.objects.filter(owner=request.user)

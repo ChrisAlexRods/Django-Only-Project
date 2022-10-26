@@ -1,6 +1,5 @@
-from django.contrib import admin
-from django.urls import path, include
-from django.shortcuts import redirect
+from django.urls import path
+
 
 from projects.views import list_projects, show_project, create_project
 
